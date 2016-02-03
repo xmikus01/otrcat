@@ -9,7 +9,7 @@ package main
 
 import (
 	"bytes"
-	"code.google.com/p/go.crypto/otr"
+	"golang.org/x/crypto/otr"
 	"fmt"
 	"io"
 	"os"

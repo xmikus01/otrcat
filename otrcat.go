@@ -8,7 +8,7 @@
 package main
 
 import (
-	"code.google.com/p/go.crypto/otr"
+	"golang.org/x/crypto/otr"
 	"crypto/rand"
 	"flag"
 	"fmt"

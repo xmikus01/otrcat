@@ -9,7 +9,7 @@
 package main
 
 import (
-	"code.google.com/p/go.crypto/otr"
+	"golang.org/x/crypto/otr"
 	"encoding/base64"
 	"fmt"
 	"io"
