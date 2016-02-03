@@ -11,7 +11,6 @@ import (
 	"io"
 	"os"
 	"os/exec"
-	"syscall"
 )
 
 type PipePair struct {
@@ -35,8 +34,7 @@ func startProxy(args []string) (cmd *exec.Cmd, stdio PipePair, err error) {
 	if err != nil {
 		return
 	}
-	// Give the proxy its own process group, so it doesn't receive our signals.
-	syscall.Setpgid(cmd.Process.Pid, cmd.Process.Pid)
+	setpgidProxy()
 	return
 }
 
