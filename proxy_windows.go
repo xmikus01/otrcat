@@ -9,6 +9,6 @@
 
 package main
 
-func setpgidProxy() {
+func setpgidProxy(cmd) {
 	// FIXME Windows doesn't have this syscall - ignore it for now
 }

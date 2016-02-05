@@ -10,10 +10,11 @@
 package main
 
 import (
+	"os/exec"
 	"syscall"
 )
 
-func setpgidProxy() {
+func setpgidProxy(cmd *exec.Cmd) {
 	// Give the proxy its own process group, so it doesn't receive our signals.
 	syscall.Setpgid(cmd.Process.Pid, cmd.Process.Pid)
 }

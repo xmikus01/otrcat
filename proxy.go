@@ -34,7 +34,7 @@ func startProxy(args []string) (cmd *exec.Cmd, stdio PipePair, err error) {
 	if err != nil {
 		return
 	}
-	setpgidProxy()
+	setpgidProxy(cmd)
 	return
 }
 
